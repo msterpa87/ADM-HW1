@@ -1,10 +1,7 @@
-# ---- Problem 1 ---- #
-# ---- Introduction (7) ---- #
-
-# ---- Say "Hello, World!" With Python ---- #
+# Say "Hello, World!" With Python
 print("Hello, World!")
 
-# ---- Write a function ---- #
+# Write a function
 def is_leap(year):
     leap = False
     
@@ -15,13 +12,13 @@ def is_leap(year):
 year = int(input())
 print(is_leap(year))
 
-# ---- Print Function ---- #
+# Print Function
 if __name__ == '__main__':
     n = int(input())
     print("".join(list(map(str,range(1,n+1)))))
 
 
-# ---- Python If-Else ---- #
+# Python If-Else
 if __name__ == '__main__':
     n = int(raw_input().strip())
     if n % 2 == 1:
@@ -32,7 +29,7 @@ if __name__ == '__main__':
         else:
             print("Weird")
 
-# ---- Arithmetic Operators ---- #
+# Arithmetic Operators
 if __name__ == '__main__':
     a = int(raw_input())
     b = int(raw_input())
@@ -40,23 +37,19 @@ if __name__ == '__main__':
     print(a-b)
     print(a*b)
 
-# ---- Python Division ---- #
+# Python Division
 if __name__ == '__main__':
     a = int(input())
     b = int(input())
 
-# ---- Loops ---- #
+# Loops
 if __name__ == '__main__':
     n = int(raw_input())
 
     for i in range(n):
         print(i**2)
 
-# ====================================== #
-
-# Data Types (6)
-
-# ---- Lists ---- #
+# Lists
 if __name__ == '__main__':
     N = int(input())
     L = []
@@ -79,7 +72,7 @@ if __name__ == '__main__':
         elif cmd[0] == "append":
             L.append(int(cmd[1]))
 
-# ---- List Comprehension ---- #
+# List Comprehension
 if __name__ == '__main__':
     x = int(raw_input())
     y = int(raw_input())
@@ -90,7 +83,7 @@ if __name__ == '__main__':
     print(l)
 
 
-# ---- Find the Runner-Up Score! ---- #
+# Find the Runner-Up Score!
 if __name__ == '__main__':
     n = int(raw_input())
     arr = map(int, raw_input().split())
@@ -100,7 +93,7 @@ if __name__ == '__main__':
     print(max(arr_wo_winner))
 
 
-# ---- Nested Lists ---- #
+# Nested Lists
 names = []
 scores = []
 
@@ -118,7 +111,7 @@ for x,y in l:
     print(y)
 
 
-# ---- Finding the Percentage ---- #
+# Finding the Percentage
 if __name__ == '__main__':
     n = int(raw_input())
     student_marks = {}
@@ -133,18 +126,13 @@ if __name__ == '__main__':
     avg = sum(scores)/len(scores)
     print("{:.2f}".format(avg))
 
-# ---- Tuples ---- #
+# Tuples
 if __name__ == '__main__':
     n = int(raw_input())
     integer_list = map(int, raw_input().split())
     print(hash(tuple(integer_list)))
 
-
-# ====================================== #
-
-# ---- Strings (14) ---- #
-
-# ---- Find a string ---- #
+# Find a string
 def count_substring(string, sub_string):
     count = 0
     n = len(string)
@@ -164,7 +152,7 @@ def count_substring(string, sub_string):
 
 if __name__ == '__main__':
 
-# ---- sWAP cASE ---- #
+# sWAP cASE
 def swap_case(s):
     string = ""
 
@@ -176,21 +164,21 @@ def swap_case(s):
 
     return string
 
-# ---- String Split and Join ---- #
+# String Split and Join
 def split_and_join(line):
     return "-".join(line.split())
 
-# ---- What's Your Name? ---- #
+# What's Your Name?
 def print_full_name(a, b):
     print "Hello {} {}! You just delved into python.".format(a,b)
 
-# ---- Mutations ---- #
+# Mutations
 def mutate_string(string, position, character):
     l = list(string)
     l[position] = character
     return "".join(l)
 
-# ---- String Validators ---- #
+# String Validators
 if __name__ == '__main__':
     s = raw_input()
     digit = False
@@ -217,7 +205,7 @@ if __name__ == '__main__':
     print(lower)
     print(upper)
 
-# Text Alignment ---- #
+# Text Alignment
 
 thickness = int(raw_input())
 c = 'H'
@@ -237,12 +225,12 @@ for i in range(thickness+1):
 for i in range(thickness):
     print ((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6)
 
-# Text Wrap ---- #
+# Text Wrap
 def wrap(string, max_width):
     wrapper = textwrap.TextWrapper(width=max_width)
     return "\n".join(wrapper.wrap(string))
 
-# Designer Door Mat ---- #
+# Designer Door Mat
 N, M = map(int, raw_input().split())
 rows = (N-1)/2
 for i in range(rows):
@@ -251,7 +239,7 @@ print("WELCOME".center(M,"-"))
 for i in reversed(range(rows)):
     print((".|."*(1+2*i)).center(M,"-"))
 
-# String Formatting ---- #
+# String Formatting
 def print_formatted(number):
 
     width = len(bin(number)[2:])
@@ -263,7 +251,7 @@ def print_formatted(number):
         z = bin(i)[2:].rjust(width)
         print("{} {} {} {}".format(x,y,w,z))
 
-# Alphabet Rangoli ---- #
+# Alphabet Rangoli
 import string
 
 def print_rangoli(size):
@@ -281,7 +269,7 @@ def print_rangoli(size):
     for row in rows:
         print(row.center(width,"-"))
 
-# Capitalize! ---- #
+# Capitalize!
 def solve(s):
     s = list(s)
     s[0] = s[0].upper()
@@ -292,7 +280,7 @@ def solve(s):
     
     return "".join(s)
 
-# The Minion Game ---- #
+# The Minion Game
 def minion_game(string):
     stuart = 0
     kevin = 0
@@ -312,7 +300,7 @@ def minion_game(string):
     else:
         print("Stuart {}".format(stuart))
 
-# Merge the Tools! ---- #
+# Merge the Tools!
 def merge_the_tools(string, k):
     for i in range(len(string)/k):
         s = list(string[k*i:k*(i+1)])
@@ -324,10 +312,6 @@ def merge_the_tools(string, k):
                 seen[x] = True
                 u += x
         print(u)
-
-# ====================================== #
-
-# ---- Sets (13) ---- #
 
 # Introduction to Sets
 def average(array):
@@ -481,11 +465,7 @@ for i in range(n):
 
 print(flag)
 
-# ====================================== #
-
-# ---- Collections (8) ----  #
-
-# ---- collections.Counter() ---- #
+# collections.Counter()
 from collections import Counter
 
 n = int(raw_input())
@@ -502,7 +482,7 @@ for i in range(n_customers):
 
 print(earned)
 
-# ---- DefaultDict Tutorial ---- #
+# DefaultDict Tutorial
 from collections import defaultdict
 
 n, m = list(map(int, raw_input().split()))
@@ -519,7 +499,7 @@ for i in range(m):
     else:
         print("-1")
 
-# ---- Collections.namedtuple() ---- #
+# Collections.namedtuple()
 from collections import namedtuple
 
 n = int(raw_input())
@@ -532,7 +512,7 @@ for i in range(n):
 
 print(round(marks/n,2))
 
-# ---- Collections.OrderedDict() ---- #
+# Collections.OrderedDict()
 from collections import OrderedDict
 
 d = OrderedDict()
@@ -550,7 +530,7 @@ for i in range(n):
 for key in d.keys():
     print("{} {}".format(key, d[key]))
 
-# ---- Word Order ---- #
+# Word Order
 from collections import defaultdict
 
 n = int(raw_input())
@@ -566,7 +546,7 @@ for i in range(n):
 print(len(d.keys()))
 print(" ".join(map(lambda w: str(d[w]), l)))
 
-# ---- Collections.dequeu() ---- #
+# Collections.dequeu()
 from collections import deque
 
 d = deque()
@@ -588,7 +568,7 @@ for i in range(n):
 
 print(" ".join(map(str, d)))
 
-# ---- Company Logo ---- #
+# Company Logo
 import math
 import os
 import random
@@ -619,7 +599,7 @@ if __name__ == '__main__':
         if i == 3:
             break
 
-# ---- Piling Up! ---- #
+# Piling Up!
 from collections import deque
 
 T = int(raw_input())
@@ -669,18 +649,14 @@ for i in range(T):
     
     print(result)
 
-# ====================================== #
-
-# ---- Date and Time (2) ---- #
-
-# ---- Calendar Module ---- #
+# Calendar Module
 import calendar
 
 days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
 month, day, year = list(map(int, raw_input().split()))
 print(days[calendar.weekday(year, month, day)])
 
-# ---- Time Delta ---- #
+# Time Delta
 import math
 import os
 import random
@@ -711,9 +687,7 @@ if __name__ == '__main__':
 
     fptr.close()
 
-# ====================================== #
-
-# ---- Exceptions (1) ---- #
+# Exceptions
 for _ in range(int(input())):
     try:
         a,b = map(int, input().split())
@@ -721,11 +695,7 @@ for _ in range(int(input())):
     except Exception as e:
         print("Error Code:",e)
 
-# ====================================== #
-
-# ---- Built-ins (3) ---- #
-
-# ---- Zipped ---- #
+# Zipped
 _, n = list(map(int, input().split()))
 scores = [list(map(float, input().split())) for _ in range(n)]
 
@@ -733,7 +703,7 @@ for x in list(zip(*scores)):
     v = round(sum(x)/n, 1)
     print(v)
 
-# ---- Athlete Sort ---- #
+# Athlete Sort
 import math
 import os
 import random
@@ -757,7 +727,7 @@ if __name__ == '__main__':
     for x in sorted(arr, key=lambda x: x[k]):
         print(" ".join(map(str, x)))
 
-# ---- ginortS ---- #
+# ginortS
 s = input()
 lower = sorted(list(filter(lambda x: x.islower(), s)))
 upper = sorted(list(filter(lambda x: x.isupper(), s)))
@@ -767,14 +737,11 @@ even = sorted(list(filter(lambda x: x.isdigit() and int(x) % 2 == 0, s)))
 s = lower + upper + odd + even
 print("".join(s))
 
-# ====================================== #
-
-# ---- Python Functionals (1) ---- #
-# ---- Map and Lambda Functions ---- #
-cube = lambda x: x**3 # complete the lambda function 
+# Map and Lambda Functions
+cube = lambda x: x**3 complete the lambda function 
 
 def fibonacci(n):
-    # return a list of fibonacci numbers
+    return a list of fibonacci numbers
     if n == 0:
         return []
     elif n == 1:
@@ -787,10 +754,7 @@ def fibonacci(n):
     
     return F
 
-# ====================================== #
-
-# ---- Regex and Parsing challenges (15) ---- #
-# ---- Detect Floating Point Number ---- #
+# Detect Floating Point Number
 import re
 
 
@@ -803,10 +767,10 @@ for _ in range(T):
     else:
         print("True")
 
-# ---- Re.split() ---- #
+# Re.split()
 regex_pattern = r",|\."
 
-# ---- Group(), Groups() & Groupdict() ---- #
+# Group(), Groups() & Groupdict()
 import re
 
 m = re.search(r'([0-9|a-z|A-Z])\1', input())
@@ -815,7 +779,7 @@ try:
 except:
     print("-1")
 
-# ---- Re.findall() & Re.finditer() ---- #
+# Re.findall() & Re.finditer()
 import re
 
 V = "aeiouAEIOU"
@@ -827,7 +791,7 @@ else:
     for s in m:
         print(s)
 
-# ---- Re.start() & Re.end() ---- #
+# Re.start() & Re.end()
 import re
 S = input()
 k = input()
@@ -838,7 +802,7 @@ if matches == []:
 for m in matches:
     print("({}, {})".format(m.start(1),m.end(1)-1))
 
-# ---- Regex Substitution ---- #
+# Regex Substitution
 import re
 
 def swap(m):
@@ -853,7 +817,7 @@ for _ in range(N):
     s = input()
     print(re.sub(r"(?<= )(&&|\|\|)(?= )",swap,s))
 
-# ---- Validating phone numbers ---- #
+# Validating phone numbers
 import re
 for _ in range(int(input())):
     if re.search(r"^[789][0-9]{9}$", input()) == None:
@@ -861,7 +825,7 @@ for _ in range(int(input())):
     else:
         print("YES")
 
-# ---- Validating and Parsing Email Adresses ---- #
+# Validating and Parsing Email Adresses
 import email.utils
 import re
 
@@ -870,7 +834,7 @@ for _ in range(int(input())):
     if re.search(r"^[a-zA-Z][\w|.|-]*@[a-zA-Z]+\.[a-zA-Z]{1,3}$", addr[1]) != None:
         print(email.utils.formataddr(addr))
 
-# ---- HTML Parser - Part 1 ---- #
+# HTML Parser - Part 1
 from html.parser import HTMLParser
 
 class MyHTMLParser(HTMLParser):
@@ -894,7 +858,7 @@ parser = MyHTMLParser()
 for _ in range(int(input())):
     parser.feed(input())
 
-# ---- HTML Parser - Part 2 ---- #
+# HTML Parser - Part 2
 from html.parser import HTMLParser
 
 class MyHTMLParser(HTMLParser):
@@ -920,7 +884,7 @@ parser = MyHTMLParser()
 parser.feed(html)
 parser.close()
 
-# ---- Detect HTML Tags, Attributes and Attribute Values ---- #
+# Detect HTML Tags, Attributes and Attribute Values
 from html.parser import HTMLParser
 
 class MyHTMLParser(HTMLParser):
@@ -933,7 +897,7 @@ parser = MyHTMLParser()
 for _ in range(int(input())):
     parser.feed(input())
 
-# ---- Validating UID ---- #
+# Validating UID
 import re
 
 def check_uid(s):
@@ -953,7 +917,7 @@ T = int(input())
 for _ in range(T):
     print(check_uid(input()))
 
-# ---- Validating Credit Card Numbers ---- #
+# Validating Credit Card Numbers
 import re
 
 for _ in range(int(input())):
@@ -966,11 +930,11 @@ for _ in range(int(input())):
     else:
         print("Invalid")
 
-# ---- Validating Postal Codes ---- #
+# Validating Postal Codes
 regex_integer_in_range = r"^[^0]\d{5}$"
 regex_alternating_repetitive_digit_pair = r"(\d)(?=\d\1)"
 
-# ---- Matrix Script ---- #
+# Matrix Script
 import math
 import os
 import random
@@ -996,13 +960,9 @@ for i in range(m):
 s = re.sub(r"([0-9a-zA-Z])[^0-9a-zA-Z]+([0-9a-zA-Z])",r"\1 \2",s)
 print(s)
 
-# ====================================== #
-
-# ---- XML (2) ---- #
-
-# ---- XML 1 - Find the Score ---- #
+# XML 1 - Find the Score
 def get_attr_number(node):
-    # your code goes here
+    your code goes here
     score = 0
 
     for elem in node.iter():
@@ -1010,25 +970,21 @@ def get_attr_number(node):
     
     return score
 
-# ---- XML 2 - Find the Maximum Depth ---- #
+# XML 2 - Find the Maximum Depth
 maxdepth = -1
 def depth(elem, level):
     global maxdepth
-    # your code goes here
+    your code goes here
     if level == maxdepth:
         maxdepth += 1
     
     for child in elem:
         depth(child, level+1)
 
-# ====================================== #
-
-# ---- Closures and Decorations (2) ---- #
-
-# ---- Standardize Mobile Number Using Decorators ---- #
+# Standardize Mobile Number Using Decorators
 def wrapper(f):
     def fun(l):
-        # complete the function
+        complete the function
         for i,x in enumerate(l):
             x = x[len(x)-10:]
             l[i] = "+91 " + x[:5] + " " + x[5:]
@@ -1036,31 +992,27 @@ def wrapper(f):
         return f(l)
     return fun
 
-# ---- Decorators 2 - Name Directory ---- #
+# Decorators 2 - Name Directory
 import operator
 
 def person_lister(f):
     def inner(people):
-        # complete the function
+        complete the function
         people = list(map(lambda x: [x[0],x[1],int(x[2]), x[3]], people))
         return list(map(f, sorted(people, key=operator.itemgetter(2))))
     return inner
 
-# ====================================== #
-
-# ---- Numpy (15) ---- #
-
-# ---- Arrays ---- #
+# Arrays
 def arrays(arr):
     return numpy.flip(numpy.array(arr, dtype=numpy.float32))
 
-# ---- Shape and Reshape ---- #
+# Shape and Reshape
 import numpy
 
 arr = list(map(int, input().split()))
 print(numpy.array(arr).reshape((3,3)))
 
-# ---- Transpose and Flatten ---- #
+# Transpose and Flatten
 import numpy
 
 arr = []
@@ -1072,7 +1024,7 @@ A = numpy.array(arr).reshape(N,M)
 print(numpy.transpose(A))
 print(A.flatten())
 
-# ---- Concatenate ---- #
+# Concatenate
 import numpy
 
 N, M, P = list(map(int, input().split()))
@@ -1086,21 +1038,21 @@ arr1 = numpy.array(arr1).reshape(N,P)
 arr2 = numpy.array(arr2).reshape(M,P)
 print(numpy.concatenate((arr1, arr2), axis=0))
 
-# ---- Zeros and Ones ---- #
+# Zeros and Ones
 import numpy
 
 dim = list(map(int, input().split()))
 print(numpy.zeros(dim, dtype=numpy.int))
 print(numpy.ones(dim, dtype=numpy.int))
 
-# ---- Eye and Identity ---- #
+# Eye and Identity
 import numpy
 
 N,M = list(map(int, input().split()))
 numpy.set_printoptions(sign=' ')
 print(numpy.eye(N,M))
 
-# ---- Array Mathematics ---- #
+# Array Mathematics
 import numpy
 
 N,M = list(map(int, input().split()))
@@ -1119,7 +1071,7 @@ print(A//B)
 print(A%B)
 print(A**B)
 
-# ---- Floor, Ceil and Rint ---- #
+# Floor, Ceil and Rint
 import numpy
 
 numpy.set_printoptions(sign=' ')
@@ -1129,7 +1081,7 @@ print(numpy.floor(A))
 print(numpy.ceil(A))
 print(numpy.rint(A))
 
-# ---- Sum and Prod ---- #
+# Sum and Prod
 import numpy
 
 N, _ = list(map(int,input().split()))
@@ -1139,7 +1091,7 @@ for _ in range(N):
 A = numpy.array(arr)
 print(numpy.prod(numpy.sum(A,axis=0)))
 
-# ---- Min and Max ---- #
+# Min and Max
 import numpy
 
 N = int(input().split()[0])
@@ -1150,7 +1102,7 @@ for _ in range(N):
 A = numpy.array(A)
 print(numpy.max(numpy.min(A,axis=1)))
 
-# ---- Mean, Var and Std ---- #
+# Mean, Var and Std
 import numpy
 
 N = int(input().split()[0])
@@ -1163,7 +1115,7 @@ print(numpy.mean(A,axis=1))
 print(numpy.var(A,axis=0))
 print(numpy.std(A,axis=None))
 
-# ---- Dot and Cross ---- #
+# Dot and Cross
 import numpy
 
 N = int(input())
@@ -1177,7 +1129,7 @@ A = numpy.array(arr1, int)
 B = numpy.array(arr2, int)
 print(numpy.dot(A,B))
 
-# ---- Inner and Outer ---- #
+# Inner and Outer
 import numpy
 
 A = numpy.array(input().split(),int)
@@ -1185,20 +1137,16 @@ B = numpy.array(input().split(),int)
 print(numpy.inner(A,B))
 print(numpy.outer(A,B))
 
-# ---- Polynomials ---- #
+# Polynomials
 import numpy
 
 print(numpy.polyval(numpy.array(input().split(),float),float(input())))
-# ---- Linear Algebra ---- #
+# Linear Algebra
 import numpy
 
 print(round(numpy.linalg.det(numpy.array([input().split() for _ in range(int(input()))], float)),2))
 
-# ====================================== #
-
-# ---- Problem 2 ---- #
-
-# ---- Birthday Cake Candles ---- #
+# Birthday Cake Candles
 def birthdayCakeCandles(candles):
     max_candle = max(candles)
     return candles.count(max_candle)
@@ -1216,13 +1164,13 @@ if __name__ == '__main__':
 
     fptr.close()
 
-# ---- Number Line Jumps ---- #
+# Number Line Jumps
 def kangaroo(x1, v1, x2, v2):
     try:
         n = (x1-x2)/(v2-v1)
     except:
         return "NO"
-    #print(n)
+   print(n)
     if n - int(n) == 0 and n>0:
         return "YES"
     else:
@@ -1247,7 +1195,7 @@ if __name__ == '__main__':
 
     fptr.close()
 
-# ---- Viral advertising ---- #
+# Viral advertising
 def viralAdvertising(n):
     total = like = 2
     for _ in range(1,n):
@@ -1266,7 +1214,7 @@ if __name__ == '__main__':
 
     fptr.close()
 
-# ---- Recursive Digit Sum ---- #
+# Recursive Digit Sum
 def superDigit(n, k):
     p = list(str(n))
     while(len(p) > 1):
@@ -1288,7 +1236,7 @@ if __name__ == '__main__':
 
     fptr.close()
 
-# ---- Insertion sort 1 ---- #
+# Insertion sort 1
 def insertionSort1(n, arr):
     x = arr[-1]
     for i in range(n-2,-1,-1):
@@ -1310,7 +1258,7 @@ if __name__ == '__main__':
 
     insertionSort1(n, arr)
 
-# ---- Insertion sort 2 ---- #
+# Insertion sort 2
 def insertionSort2(n, arr):
     for i in range(1,len(arr)):
         if arr[i] > arr[i-1]:
